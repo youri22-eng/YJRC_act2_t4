@@ -100,7 +100,7 @@ Repositorio de la Actividad 1: https://github.com/youri22-eng/YJRC_act1_t4
 ![PathVariable](capturas/05-pathvariable.png)
 
 ### POST probado en Bruno tanto en LOCAL COMO EN LA VPS
-![local](capturas/06-bruno.local.png)
+![local](capturas/06-bruno-local.png)
 ![vps](capturas/07-bruno-vps.png)
 
 ## Despliegue en la VPS
