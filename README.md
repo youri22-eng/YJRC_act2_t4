@@ -67,7 +67,7 @@ Al presionar **Guardar** en el formulario se envia un POST a `/productos/guardar
 | 6 - Lapicero | http://194.195.86.95:8083/productos/6 |
 | Id que no existe (prueba) | http://194.195.86.95:8083/productos/99 |
 
-### Actividad 2 - API REST (POST con JSON)
+### Actividad 2 - API REST (POST con JSON) ESTO SE HACE EN BRUNO
 
 | Metodo | URL |
 |---|---|
