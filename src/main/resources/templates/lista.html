@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de productos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid #999; padding: 8px 14px; text-align: left; }
+        th { background: #eeeeee; }
+    </style>
+</head>
+<body>
+    <h1 th:text="'Proyecto: ' + ${proyecto}">Proyecto</h1>
+    <h3 th:text="'Autor: ' + ${autor}">Autor</h3>
+
+    <h2 th:text="${titulo}">Lista de productos</h2>
+
+    <form th:action="@{/productos/filtrar}" method="get">
+        <label>Categoria:</label>
+        <input type="text" name="categoria" placeholder="Ej. Bebidas">
+        <button type="submit">Filtrar</button>
+        <a th:href="@{/productos}">Ver todos</a>
+    </form>
+    <br>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Detalle</th>
+        </tr>
+        <tr th:each="p : ${productos}">
+            <td th:text="${p.id}">1</td>
+            <td th:text="${p.nombre}">Nombre</td>
+            <td th:text="'$' + ${p.precio}">0</td>
+            <td th:text="${p.categoria}">Categoria</td>
+            <td><a th:href="@{/productos/{id}(id=${p.id})}">Ver</a></td>
+        </tr>
+        <tr th:if="${#lists.isEmpty(productos)}">
+            <td colspan="5">No hay productos en esta categoria</td>
+        </tr>
+    </table>
+
+    <p><a th:href="@{/productos/nuevo}">Agregar producto</a></p>
+</body>
+</html>

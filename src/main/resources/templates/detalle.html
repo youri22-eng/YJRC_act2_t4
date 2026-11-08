@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del producto</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+    </style>
+</head>
+<body>
+    <h1 th:text="'Proyecto: ' + ${proyecto}">Proyecto</h1>
+    <h3 th:text="'Autor: ' + ${autor}">Autor</h3>
+
+    <h2 th:text="${titulo}">Detalle del producto</h2>
+
+    <div th:if="${producto != null}">
+        <ul>
+            <li><strong>ID:</strong> <span th:text="${producto.id}"></span></li>
+            <li><strong>Nombre:</strong> <span th:text="${producto.nombre}"></span></li>
+            <li><strong>Precio:</strong> <span th:text="'$' + ${producto.precio}"></span></li>
+            <li><strong>Categoria:</strong> <span th:text="${producto.categoria}"></span></li>
+        </ul>
+    </div>
+
+    <p th:unless="${producto != null}">Ese producto no existe.</p>
+
+    <p><a th:href="@{/productos}">Volver a la lista</a></p>
+</body>
+</html>

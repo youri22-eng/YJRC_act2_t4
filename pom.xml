@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.youri</groupId>
-	<artifactId>act1t4</artifactId>
+	<artifactId>act2t4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>act1t4</name>
+	<name>act2t4</name>
 	<description/>
 	<url/>
 	<licenses>
